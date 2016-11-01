@@ -1,0 +1,222 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://theme/theme.tres" type="Theme" id=1]
+[ext_resource path="res://example.gd" type="Script" id=2]
+
+[node name="Example" type="Control"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+script/script = ExtResource( 2 )
+__meta__ = { "_edit_lock_":true }
+
+[node name="Panel" type="Panel" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 50.0
+margin/top = 50.0
+margin/right = 50.0
+margin/bottom = 50.0
+
+[node name="ControlGallery" type="Control" parent="Panel"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 289.0
+margin/top = 47.0
+margin/right = 43.0
+margin/bottom = 53.0
+__meta__ = { "_edit_lock_":true }
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ControlGallery"]
+
+anchor/top = 3
+anchor/bottom = 3
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 41.0
+margin/top = 165.0
+margin/right = 197.0
+margin/bottom = 5.0
+custom_constants/separation = 2
+alignment = 0
+
+[node name="CheckBox" type="CheckBox" parent="Panel/ControlGallery/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 156.0
+margin/bottom = 31.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+text = "Check Me"
+flat = false
+align = 0
+
+[node name="CheckBox2" type="CheckBox" parent="Panel/ControlGallery/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 33.0
+margin/right = 156.0
+margin/bottom = 64.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+text = "Check Me"
+flat = false
+align = 0
+
+[node name="CheckBox3" type="CheckBox" parent="Panel/ControlGallery/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 66.0
+margin/right = 156.0
+margin/bottom = 97.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+text = "Check Me"
+flat = false
+align = 0
+
+[node name="OptionButton" type="OptionButton" parent="Panel/ControlGallery/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 99.0
+margin/right = 156.0
+margin/bottom = 133.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Option 1"
+flat = false
+align = 0
+selected = 0
+items = [ "Option 1", null, false, 0, null, "Option 2", null, false, 1, null, "Option 3", null, true, 2, null ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+
+anchor/top = 3
+anchor/bottom = 3
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 20.0
+margin/top = 90.0
+margin/right = 270.0
+margin/bottom = -52.0
+custom_constants/separation = 2
+alignment = 1
+__meta__ = { "_edit_group_":true }
+
+[node name="ExampleText" type="Button" parent="Panel/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 250.0
+margin/bottom = 34.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Example Text"
+flat = false
+align = 0
+
+[node name="FiraSansFontUsed" type="Button" parent="Panel/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 36.0
+margin/right = 250.0
+margin/bottom = 70.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Fira Sans Font Used"
+flat = false
+align = 0
+
+[node name="ClickMeForControlGallery" type="Button" parent="Panel/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 72.0
+margin/right = 250.0
+margin/bottom = 106.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Click me for Control Gallery"
+flat = false
+align = 0
+
+[node name="QuitDemo" type="Button" parent="Panel/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 108.0
+margin/right = 250.0
+margin/bottom = 142.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Quit Demo"
+flat = false
+align = 0
+
+[connection signal="pressed" from="Panel/VBoxContainer/ClickMeForControlGallery" to="." method="_on_ClickMeForControlGallery_pressed"]
+
+[connection signal="pressed" from="Panel/VBoxContainer/QuitDemo" to="." method="_on_QuitDemo_pressed"]
+
+
