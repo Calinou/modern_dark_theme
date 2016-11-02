@@ -1,14 +1,22 @@
-[gd_resource type="Theme" load_steps=12 format=1]
+[gd_resource type="Theme" load_steps=20 format=1]
 
 [ext_resource path="res://theme/resources/stylebox_disabled.tres" type="StyleBox" id=1]
 [ext_resource path="res://theme/resources/focus.tres" type="StyleBox" id=2]
 [ext_resource path="res://theme/resources/stylebox_hover.tres" type="StyleBox" id=3]
 [ext_resource path="res://theme/resources/stylebox_normal.tres" type="StyleBox" id=4]
-[ext_resource path="res://theme/resources/stylebox_pressed.tres" type="StyleBox" id=5]
+[ext_resource path="res://theme/resources/stylebox_scrollbar_hilight.tres" type="StyleBox" id=5]
 [ext_resource path="res://theme/checkbox_checked.png" type="Texture" id=6]
-[ext_resource path="res://theme/checkbox_unchecked.png" type="Texture" id=7]
-[ext_resource path="res://theme/caret_down.png" type="Texture" id=8]
-[ext_resource path="res://theme/fonts/fira_sans_book.otf" type="DynamicFontData" id=9]
+[ext_resource path="res://theme/radio_checked.png" type="Texture" id=7]
+[ext_resource path="res://theme/radio_unchecked.png" type="Texture" id=8]
+[ext_resource path="res://theme/checkbox_unchecked.png" type="Texture" id=9]
+[ext_resource path="res://theme/resources/stylebox_popup.tres" type="StyleBox" id=10]
+[ext_resource path="res://theme/hslider_grabber.png" type="Texture" id=11]
+[ext_resource path="res://theme/hslider_grabber_hilite.png" type="Texture" id=12]
+[ext_resource path="res://theme/hslider_tick.png" type="Texture" id=13]
+[ext_resource path="res://theme/caret_down.png" type="Texture" id=14]
+[ext_resource path="res://theme/icon_close.png" type="Texture" id=15]
+[ext_resource path="res://theme/icon_close_hilite.png" type="Texture" id=16]
+[ext_resource path="res://theme/fonts/fira_sans_book.otf" type="DynamicFontData" id=17]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -28,7 +36,7 @@ draw_bg = true
 font/size = 18
 font/use_mipmaps = true
 font/use_filter = true
-font/font = ExtResource( 9 )
+font/font = ExtResource( 17 )
 
 [resource]
 
@@ -53,9 +61,9 @@ CheckBox/constants/check_vadjust = 0
 CheckBox/constants/hseparation = 0
 CheckBox/fonts/font = null
 CheckBox/icons/checked = ExtResource( 6 )
-CheckBox/icons/radio_checked = null
-CheckBox/icons/radio_unchecked = null
-CheckBox/icons/unchecked = ExtResource( 7 )
+CheckBox/icons/radio_checked = ExtResource( 7 )
+CheckBox/icons/radio_unchecked = ExtResource( 8 )
+CheckBox/icons/unchecked = ExtResource( 9 )
 CheckBox/styles/disabled = null
 CheckBox/styles/focus = ExtResource( 2 )
 CheckBox/styles/hover = null
@@ -145,18 +153,18 @@ HScrollBar/icons/decrement = null
 HScrollBar/icons/decrement_hilite = null
 HScrollBar/icons/increment = null
 HScrollBar/icons/increment_hilite = null
-HScrollBar/styles/grabber = null
-HScrollBar/styles/grabber_hilite = null
-HScrollBar/styles/scroll = null
-HScrollBar/styles/scroll_focus = null
+HScrollBar/styles/grabber = ExtResource( 3 )
+HScrollBar/styles/grabber_hilite = ExtResource( 5 )
+HScrollBar/styles/scroll = ExtResource( 10 )
+HScrollBar/styles/scroll_focus = ExtResource( 2 )
 HSeparator/constants/separation = 0
 HSeparator/styles/separator = null
-HSlider/icons/grabber = null
-HSlider/icons/grabber_hilite = null
-HSlider/icons/tick = null
+HSlider/icons/grabber = ExtResource( 11 )
+HSlider/icons/grabber_hilite = ExtResource( 12 )
+HSlider/icons/tick = ExtResource( 13 )
 HSlider/styles/focus = null
 HSlider/styles/grabber_hilite = null
-HSlider/styles/slider = null
+HSlider/styles/slider = ExtResource( 10 )
 HSplitContainer/constants/autohide = 0
 HSplitContainer/constants/separation = 0
 HSplitContainer/icons/grabber = null
@@ -177,22 +185,22 @@ ItemList/styles/cursor = null
 ItemList/styles/cursor_unfocused = null
 ItemList/styles/selected = null
 ItemList/styles/selected_focus = null
-Label/colors/font_color = Color( 0, 0, 0, 1 )
+Label/colors/font_color = Color( 1, 1, 1, 1 )
 Label/colors/font_color_shadow = Color( 0, 0, 0, 1 )
 Label/constants/line_spacing = 0
 Label/constants/shadow_as_outline = 0
 Label/constants/shadow_offset_x = 0
 Label/constants/shadow_offset_y = 0
 Label/fonts/font = null
-LineEdit/colors/cursor_color = Color( 0, 0, 0, 1 )
-LineEdit/colors/font_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/cursor_color = Color( 1, 1, 1, 1 )
+LineEdit/colors/font_color = Color( 1, 1, 1, 1 )
 LineEdit/colors/font_color_selected = Color( 0, 0, 0, 1 )
-LineEdit/colors/selection_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/selection_color = Color( 1, 1, 1, 1 )
 LineEdit/constants/minimum_spaces = 0
 LineEdit/fonts/font = null
-LineEdit/styles/focus = null
-LineEdit/styles/normal = null
-LineEdit/styles/read_only = null
+LineEdit/styles/focus = ExtResource( 2 )
+LineEdit/styles/normal = ExtResource( 10 )
+LineEdit/styles/read_only = ExtResource( 1 )
 LinkButton/colors/font_color = Color( 0, 0, 0, 1 )
 LinkButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
 LinkButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -220,11 +228,11 @@ OptionButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
 OptionButton/constants/arrow_margin = 4
 OptionButton/constants/hseparation = 0
 OptionButton/fonts/font = null
-OptionButton/icons/arrow = ExtResource( 8 )
+OptionButton/icons/arrow = ExtResource( 14 )
 OptionButton/styles/disabled = ExtResource( 1 )
 OptionButton/styles/focus = ExtResource( 2 )
 OptionButton/styles/hover = ExtResource( 3 )
-OptionButton/styles/normal = ExtResource( 4 )
+OptionButton/styles/normal = ExtResource( 10 )
 OptionButton/styles/pressed = ExtResource( 5 )
 Panel/styles/panel = SubResource( 1 )
 Panel/styles/panelf = null
@@ -239,9 +247,9 @@ PopupMenu/constants/vseparation = 6
 PopupMenu/fonts/font = null
 PopupMenu/icons/checked = ExtResource( 6 )
 PopupMenu/icons/submenu = null
-PopupMenu/icons/unchecked = ExtResource( 7 )
+PopupMenu/icons/unchecked = ExtResource( 9 )
 PopupMenu/styles/hover = ExtResource( 3 )
-PopupMenu/styles/panel = ExtResource( 4 )
+PopupMenu/styles/panel = ExtResource( 10 )
 PopupMenu/styles/panel_disabled = ExtResource( 1 )
 PopupMenu/styles/separator = null
 PopupPanel/styles/panel = null
@@ -251,9 +259,9 @@ ProgressBar/fonts/font = null
 ProgressBar/styles/bg = null
 ProgressBar/styles/fg = null
 ReferenceFrame/styles/border = null
-RichTextLabel/colors/default_color = Color( 0, 0, 0, 1 )
+RichTextLabel/colors/default_color = Color( 1, 1, 1, 1 )
 RichTextLabel/colors/font_color_selected = Color( 0, 0, 0, 1 )
-RichTextLabel/colors/selection_color = Color( 0, 0, 0, 1 )
+RichTextLabel/colors/selection_color = Color( 1, 1, 1, 1 )
 RichTextLabel/constants/line_separation = 0
 RichTextLabel/constants/table_hseparation = 0
 RichTextLabel/constants/table_vseparation = 0
@@ -308,25 +316,25 @@ TextEdit/colors/completion_font_color = Color( 0, 0, 0, 1 )
 TextEdit/colors/completion_scroll_color = Color( 0, 0, 0, 1 )
 TextEdit/colors/completion_selected_color = Color( 0, 0, 0, 1 )
 TextEdit/colors/current_line_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/font_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/font_color = Color( 1, 1, 1, 1 )
 TextEdit/colors/font_color_selected = Color( 0, 0, 0, 1 )
 TextEdit/colors/function_color = Color( 0, 0, 0, 1 )
 TextEdit/colors/line_number_color = Color( 0, 0, 0, 1 )
 TextEdit/colors/mark_color = Color( 0, 0, 0, 1 )
 TextEdit/colors/member_variable_color = Color( 0, 0, 0, 1 )
 TextEdit/colors/number_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/selection_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/selection_color = Color( 1, 1, 1, 1 )
 TextEdit/colors/symbol_color = Color( 0, 0, 0, 1 )
 TextEdit/colors/word_highlighted_color = Color( 0, 0, 0, 1 )
 TextEdit/constants/completion_lines = 0
 TextEdit/constants/completion_max_width = 0
 TextEdit/constants/completion_scroll_width = 0
-TextEdit/constants/line_spacing = 0
+TextEdit/constants/line_spacing = 5
 TextEdit/fonts/font = null
 TextEdit/icons/tab = null
 TextEdit/styles/completion = null
-TextEdit/styles/focus = null
-TextEdit/styles/normal = null
+TextEdit/styles/focus = ExtResource( 2 )
+TextEdit/styles/normal = ExtResource( 10 )
 ToolButton/colors/font_color = Color( 0, 0, 0, 1 )
 ToolButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
 ToolButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -338,12 +346,12 @@ ToolButton/styles/focus = null
 ToolButton/styles/hover = null
 ToolButton/styles/normal = null
 ToolButton/styles/pressed = null
-TooltipLabel/colors/font_color = Color( 0, 0, 0, 1 )
+TooltipLabel/colors/font_color = Color( 1, 1, 1, 1 )
 TooltipLabel/colors/font_color_shadow = Color( 0, 0, 0, 1 )
 TooltipLabel/constants/shadow_offset_x = 0
 TooltipLabel/constants/shadow_offset_y = 0
 TooltipLabel/fonts/font = null
-TooltipPanel/styles/panel = null
+TooltipPanel/styles/panel = ExtResource( 4 )
 Tree/colors/cursor_color = Color( 0, 0, 0, 1 )
 Tree/colors/drop_position_color = Color( 0, 0, 0, 1 )
 Tree/colors/font_color = Color( 0, 0, 0, 1 )
@@ -387,16 +395,16 @@ VButtonArray/fonts/font = null
 VButtonArray/fonts/font_selected = null
 VButtonArray/styles/focus = ExtResource( 2 )
 VButtonArray/styles/hover = ExtResource( 3 )
-VButtonArray/styles/normal = ExtResource( 4 )
+VButtonArray/styles/normal = ExtResource( 10 )
 VButtonArray/styles/selected = ExtResource( 5 )
 VScrollBar/icons/decrement = null
 VScrollBar/icons/decrement_hilite = null
 VScrollBar/icons/increment = null
 VScrollBar/icons/increment_hilite = null
-VScrollBar/styles/grabber = null
-VScrollBar/styles/grabber_hilite = null
-VScrollBar/styles/scroll = null
-VScrollBar/styles/scroll_focus = null
+VScrollBar/styles/grabber = ExtResource( 3 )
+VScrollBar/styles/grabber_hilite = ExtResource( 5 )
+VScrollBar/styles/scroll = ExtResource( 10 )
+VScrollBar/styles/scroll_focus = ExtResource( 2 )
 VSeparator/constants/separation = 0
 VSeparator/styles/separator = null
 VSlider/icons/grabber = null
@@ -408,13 +416,13 @@ VSplitContainer/constants/autohide = 0
 VSplitContainer/constants/separation = 0
 VSplitContainer/icons/grabber = null
 VSplitContainer/styles/bg = null
-WindowDialog/colors/title_color = Color( 0, 0, 0, 1 )
+WindowDialog/colors/title_color = Color( 1, 1, 1, 1 )
 WindowDialog/constants/close_h_ofs = 0
 WindowDialog/constants/close_v_ofs = 0
 WindowDialog/constants/title_height = 0
 WindowDialog/constants/titlebar_height = 0
 WindowDialog/fonts/title_font = null
-WindowDialog/icons/close = null
-WindowDialog/icons/close_hilite = null
-WindowDialog/styles/panel = null
+WindowDialog/icons/close = ExtResource( 15 )
+WindowDialog/icons/close_hilite = ExtResource( 16 )
+WindowDialog/styles/panel = ExtResource( 10 )
 
