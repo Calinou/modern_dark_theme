@@ -1,5 +1,8 @@
 # Modern Dark theme for Godot
 
+**This project is very old and is no longer maintained.**
+**The theme won't work with Godot 3.0 or later.**
+
 ![Demo image](https://lut.im/6X2lfNGJ2k/4Q1GDspYUy4qqJOl.png)
 
 A modern, dark, flat theme, intended for use in games.
